@@ -1,0 +1,134 @@
+### HOTELS API
+GET http://127.0.0.1:8000/hotels/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/hotels/
+Content-Type: application/json
+
+{
+    "hotel_name": "Grand Palace Hotel",
+    "location": "Thiruvalla",
+    "address": "MC Road, Thiruvalla, Kerala",
+    "phone": "9876543210",
+    "email": "grandpalace@gmail.com",
+    "rating": 4.5
+}
+
+###
+GET http://127.0.0.1:8000/hotels/1/
+Accept: application/json
+
+
+### ROOMS API
+GET http://127.0.0.1:8000/rooms/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/rooms/
+Content-Type: application/json
+
+{
+    "hotel": 1,
+    "room_number": "101",
+    "room_type": "Deluxe",
+    "price_per_night": 2500,
+    "capacity": 2,
+    "available": true
+}
+
+### 
+GET http://127.0.0.1:8000/rooms/1/
+Accept: application/json
+
+
+
+### CUSTOMERS API
+GET http://127.0.0.1:8000/customers/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/customers/
+Content-Type: application/json
+
+{
+    "customer_name": "Anjali Menon",
+    "phone": "9876543210",
+    "email": "anjali@gmail.com",
+    "age": 25
+}
+
+###
+GET http://127.0.0.1:8000/customers/1/
+Accept: application/json
+
+
+
+### BOOKINGS API
+GET http://127.0.0.1:8000/bookings/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/bookings/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "room": 1,
+    "check_in_date": "2026-11-05",
+    "check_out_date": "2026-11-08"
+}
+
+###
+POST http://127.0.0.1:8000/bookings/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "room": 1,
+    "check_in_date": "2026-11-03",
+    "check_out_date": "2026-11-07"
+}
+
+###
+DELETE http://127.0.0.1:8000/bookings/2/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/bookings/1/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "room": 1,
+    "check_in_date": "2026-11-06",
+    "check_out_date": "2026-11-10"
+}
+
+
+###
+POST http://127.0.0.1:8000/bookings/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "room": 1,
+    "check_in_date": "2026-10-30",
+    "check_out_date": "2026-11-02"
+}
+
+###
+PUT http://127.0.0.1:8000/bookings/4/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "room": 1,
+    "check_in_date": "2026-10-30",
+    "check_out_date": "2026-11-02",
+    "status": "Cancelled"
+}
+
+###
+GET http://127.0.0.1:8000/rooms/
+Accept: application/json
